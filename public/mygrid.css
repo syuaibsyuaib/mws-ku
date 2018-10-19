@@ -1,0 +1,208 @@
+html,
+body {
+    height: 100%;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px auto 50% auto;
+    padding: 0px 10px;
+
+}
+
+.header,
+.sidebar,
+.konten,
+.footer {
+    padding: 10px;
+}
+
+.menu {
+    background: #FF7918;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: auto auto auto 20%;
+    position: relative;
+
+}
+
+.menu a {
+    text-align: center;
+    text-decoration: none;
+    grid-column: 4/5;
+    color: white;
+    margin: auto;
+    font-size: 19px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    /* position: absolute; */
+
+}
+
+.menu a:hover {
+    font-size: 16px;
+}
+
+.menu img {
+    margin-left: 1%;
+    height: 100%;
+    width: auto;
+    position: absolute;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.header {
+    /* background-image: url("img/header.png");
+    background-size: auto 100%; */
+    background: #2B2B2B;
+    grid-column: 1/-1;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    border-bottom: 10px solid #444444;
+    border-top: 10px solid #e46000;
+}
+
+.head {
+    position: relative;
+    color: white;
+    margin: 0;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.head h1,
+h5 {
+    margin: 0px;
+    font-size: 6vmin;
+}
+
+.sidebar {
+    grid-column: 1/2;
+    background: #8a8a8a;
+}
+
+.bayangan img {
+    padding: 5px;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.konten {
+    background: #FFFFFF;
+    grid-column: 2/-1;
+    display: grid;
+    grid-gap: 4px;
+}
+
+.subkonten {
+    background: lightgrey;
+    grid-column: 1/-1;
+    text-align: center;
+    padding-top: 10px;
+}
+
+a {
+    color: rgb(255, 255, 255);
+}
+
+.footer {
+    background: #111111;
+    grid-column: 1/-1;
+    grid-gap: 4px;
+    color: #C4C4C4;
+    border-top: 10px solid #373737;
+}
+
+.biodata {
+    max-width: 700px;
+    margin: 10px auto 10px;
+}
+
+.biodata p,
+h5 {
+    margin: 0;
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+.tombol {
+    display: none;
+
+}
+
+
+
+@media screen and (max-width:500px) {
+    .container {
+        grid-template-rows: 40px auto 50% auto;
+    }
+
+    .menu {
+        background: #FF7918;
+        grid-column: 1/-1;
+        display: grid;
+        grid-template-columns: auto auto auto 120px;
+        position: relative;
+    }
+
+    .menu a {
+        margin: auto;
+        font-size: 15px;
+    }
+
+    .menu a:hover {
+        font-size: 16px;
+    }
+
+    .menu img {
+        margin-top: 0, 5%;
+        margin-left: 20px;
+    }
+
+    .konten {
+        grid-column: 1/-1;
+    }
+
+    .sidebar {
+        position: fixed;
+        width: 28%;
+        height: auto;
+        top: 25%;
+        left: -28%;
+        -webkit-transition: left 0.5s;
+        transition: left 0.5s;
+    }
+
+    .sidebar:hover {
+        left: 1%;
+    }
+
+}
+
+@media screen and (max-width:343px) {
+    .menu img {
+        margin-top: 0, 1%;
+        margin-left: 10px;
+        width: 80px;
+        height: 40px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .menu a:hover {
+        font-size: 13px;
+    }
+
+}
